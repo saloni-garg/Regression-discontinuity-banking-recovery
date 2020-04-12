@@ -9,12 +9,12 @@
 
 - First, we'll load the banking dataset and look at the first few rows of data. This puts us in a good position to understand the dataset itself and begin thinking about how to analyze the data.
 
-- Here's a quick summary of the Levels and thresholds again:
-<ul>
+Here's a quick summary of the Levels and thresholds again:
+<ol>
 <li>Level 0: Expected recovery amounts &gt;\$0 and &lt;=\$1000</li>
 <li>Level 1: Expected recovery amounts &gt;\$1000 and &lt;=\$2000</li>
 <li>The threshold of \$1000 separates Level 0 from Level 1</li>
-</ul>
+</ol>
 A key question is whether there are other factors besides Expected Recovery Amount that also varied systematically across the \$1000 threshold. For example, does the customer age show a jump (discontinuity) at the \$1000 threshold or does that age vary smoothly? We can examine this by first making a scatter plot of the age as a function of Expected Recovery Amount for a small window of Expected Recovery Amount, \$0 to \$2000. This range covers Levels 0 and 1.
 
 - For determining if there is a difference in the ages just above and just below the threshold, we will use the Kruskal-Wallis test which is a statistical test that makes no distributional assumptions.
